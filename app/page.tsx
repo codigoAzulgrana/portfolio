@@ -1,8 +1,5 @@
-import Image from "next/image";
- import { Home } from "./components/templates/Home";
+import { Home } from "./components/templates/home/Home";
 
 export default function HomePage() {
-  return (
-    <Home/>
-  );
+  return <Home />;
 }

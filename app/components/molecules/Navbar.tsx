@@ -23,7 +23,7 @@ export const Navbar = () => {
 
 
     return (
-        <nav className='absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 text-black'>
+        <nav className='absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 text-black '>
             <NavItem url='/' label='Desarrollador Full Stack' claseNameNavItem='text-xl font-bold' />
 
             {/** Navegando desde el ordenador */}

@@ -1,0 +1,90 @@
+:root {
+    --sanlorenzo-azul: #0D47A1;
+    --sanlorenzo-rojo: #FF0000;
+    --sanlorenzo-blanco: #FFFFFF;
+}
+
+/* --- ANIMACIÓN 1: RAYO DE DERECHA A IZQUIERDA --- */
+@keyframes rayo-derecha-a-izquierda {
+  0% {
+    background-position: 100% 50%; /* Inicia fuera a la derecha */
+  }
+  50% {
+    background-position: 0% 50%;  /* Cruza completamente a la izquierda */
+  }
+  100% {
+    background-position: 100% 50%; /* Vuelve a la derecha */
+  }
+}
+
+/* --- ANIMACIÓN 2: RAYO DE IZQUIERDA A DERECHA --- */
+@keyframes rayo-izquierda-a-derecha {
+  0% {
+    background-position: 0% 50%;  /* Inicia fuera a la izquierda */
+  }
+  50% {
+    background-position: 100% 50%; /* Cruza completamente a la derecha */
+  }
+  100% {
+    background-position: 0% 50%;  /* Vuelve a la izquierda */
+  }
+}
+
+.text-title-casla-1 {
+    /* PROPIEDADES BASE COPIADAS: Definición del 'Rayo' */
+    background: linear-gradient(
+        45deg, 
+        var(--sanlorenzo-rojo) 0%, 
+        var(--sanlorenzo-rojo) 45%, 
+        var(--sanlorenzo-blanco) 50%, 
+        var(--sanlorenzo-azul) 55%, 
+        var(--sanlorenzo-azul) 100%
+    );
+    background-size: 400% 400%; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* PROPIEDADES BASE COPIADAS: Estilo del texto */
+    font-family: 'Arial Black', sans-serif;
+    font-size: 5em; /* Añadido un tamaño grande para impacto */
+    font-weight: 900;
+    text-transform: uppercase;
+
+    /* ANIMACIÓN ESPECÍFICA (D -> I) */
+    animation: rayo-derecha-a-izquierda 5s ease-in-out infinite; 
+}
+
+.text-title-casla-2 {
+    /* PROPIEDADES BASE COPIADAS: Definición del 'Rayo' */
+    background: linear-gradient(
+        45deg, 
+        var(--sanlorenzo-rojo) 0%, 
+        var(--sanlorenzo-rojo) 45%, 
+        var(--sanlorenzo-blanco) 50%, 
+        var(--sanlorenzo-azul) 55%, 
+        var(--sanlorenzo-azul) 100%
+    );
+    background-size: 400% 400%; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* PROPIEDADES BASE COPIADAS: Estilo del texto */
+    font-family: 'Arial Black', sans-serif;
+    font-size: 5em; /* Igual que el título 1 para uniformidad */
+    font-weight: 900;
+    text-transform: uppercase;
+
+    /* ANIMACIÓN ESPECÍFICA (I -> D) */
+    animation: rayo-izquierda-a-derecha 5s ease-in-out infinite; 
+}
+
+
+.text-descripcion-casla {
+background: linear-gradient(35deg,
+var(--sanlorenzo-rojo), var(--sanlorenzo-azul));
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
